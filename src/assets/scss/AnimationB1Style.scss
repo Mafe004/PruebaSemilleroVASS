@@ -1,0 +1,67 @@
+$transition-duration: 0.03s; // Duración de la transición
+
+
+.box {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 1;
+
+    .line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        background-color: rgb(248, 248, 248);
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform $transition-duration, background-color $transition-duration;
+
+        &:hover {
+            transform: scaleX(1);
+        }
+
+    }
+
+    &:hover {
+        animation: expand $transition-duration;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-size: 30px;    
+        .IconChange {
+            transform: rotatez(-35deg); // Rotamos el ícono 35 grados al pasar el mouse sobre el contenedor
+          
+  }
+    }
+    
+    
+}
+
+@keyframes expand {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.TextStyle {
+    color: aliceblue;
+    font-size: 30px;
+}
+@keyframes CircleSpin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+        
+    }
+}
+.CircleSpin{
+        animation: CircleSpin infinite 20s linear;
+    }
+
+

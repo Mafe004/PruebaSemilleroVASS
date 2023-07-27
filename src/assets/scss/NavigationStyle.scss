@@ -1,0 +1,8 @@
+.navbar {
+    background: rgb (0,0,0); //Transparencia navbar//
+    &.nav-link {
+      &.text-white {
+        color: white;
+      }
+    }
+  }

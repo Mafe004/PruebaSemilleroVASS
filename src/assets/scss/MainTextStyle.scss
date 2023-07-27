@@ -1,0 +1,39 @@
+
+.MainText {
+  .parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+  }
+
+  .parallax-content {
+    position: relative;
+    z-index: 1; 
+    display: flex;
+    color: #000000; /* Color del texto */
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .text-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+    background-color: transparent; 
+    opacity: 0.5; /* Opacidad del fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .word-art {
+    position: absolute;
+    font-size: 350px;
+    color: #000000; /* Color del texto de fondo */
+    margin: 0;
+  }
+}
